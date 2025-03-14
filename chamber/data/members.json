@@ -1,0 +1,60 @@
+{
+  "companies": [
+    {
+      "name": "Tuskys Supermarkets",
+      "address": "P.O.Box 123 Nairobi",
+      "phone": "+254 700 123456",
+      "website": "www.tuskyssupermarkets.co.ke",
+      "image": "https://bit.ly/3Fsf5aV",
+      "membership_level": 1
+    },
+    {
+      "name": "Quickmart Retailers",
+      "address": "P.O.Box 4321 Nairobi",
+      "phone": "+254 711 987654",
+      "website": "www.quickmart.co.ke",
+      "image": "https://bit.ly/3DH63q6",
+      "membership_level": 2
+    },
+    {
+      "name": "Naivas wholesalers",
+      "address": "P.O.Box 8 Nairobi",
+      "phone": "+254 711 987311",
+      "website": "www.naivas.co.ke",
+      "image": "https://bit.ly/3FFmhR4",
+      "membership_level": 3
+    },
+    {
+      "name": "Carrerfour Traders",
+      "address": "P.O.Box 43 Nairobi",
+      "phone": "+254 711 987654",
+      "website": "www.carreerfour.co.ke",
+      "image": "https://bit.ly/3FxBTWX",
+      "membership_level": 4
+    },
+    {
+      "name": "Khubi solutions ltd",
+      "address": "P.O.Box 4321 Nairobi",
+      "phone": "+254 731343540",
+      "website": "www.khubisolutions.com",
+      "image": "https://bit.ly/4kI9YUe",
+      "membership_level": 5
+    },
+    {
+      "name": "Vortex Solutions",
+      "address": "P.O.Box 321 Nairobi",
+      "phone": "+254 711 195160",
+      "website": "www.quickmart.co.ke",
+      "image": "https://bit.ly/3DU2Rr8",
+      "membership_level": 6
+    },
+    {
+      "name": "Jumbo Foam",
+      "address": "P.O.Box 100 Nairobi",
+      "phone": "+254 700200100",
+      "website": "www.jumbofoam.co.ke",
+      "image": "https://bit.ly/3FryoBc",
+      "membership_level": 7
+    }
+  ]
+}

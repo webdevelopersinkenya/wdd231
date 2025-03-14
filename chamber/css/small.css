@@ -1,0 +1,43 @@
+/* Mobile Navigation (Hamburger Menu) */
+.menu-icon {
+    display: none; /* Shown only in mobile */
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+}
+
+/* Hidden menu by default on small screens */
+nav ul {
+    display: none;  /* Hidden initially */
+    flex-direction: column;
+    background: #2a537a;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Show the menu when 'show' class is added */
+nav ul.show {
+    display: flex;
+}
+
+/* Adjustments for mobile view */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show hamburger menu */
+    }
+
+    nav ul {
+        display: none; /* Ensure it starts hidden */
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+}
