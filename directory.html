@@ -1,22 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta property="og:title" content="Nairobi Chamber of Commerce Directory">
-   <meta property="og:type" content="website">
-   <meta property="og:image" content="https://yourwebsite.com/images/chamber-logo.jpg">
-   <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
-   <meta property="og:description" content="Discover and connect with businesses in the Nairobi Chamber of Commerce directory.">
-   <meta property="og:site_name" content="Nairobi Chamber of Commerce">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nairobi Chamber of Commerce</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="icon" href="favicon.ico">
-   
+    <title>The Nairobi Chamber of Commerce</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+    <div class="wrapper">
+        <!-- Header -->
+        <header>
+            <img src="image/logo.jpg" alt="Company Logo" class="logo">
+            <h1>The Nairobi Chamber of Commerce</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main class="container">
+            <!-- Events Section -->
+            <section class="events">
+                <img src="image/events.jpg" alt="Chamber Event">
+                <h2>Current Events</h2>
+                <p>Upcoming business networking event on March 25th.</p>
+            </section>
+
+            <!-- Hero Section -->
+            <section class="hero">
+                <img src="image/nairobi.jpg" alt="Nairobi City">
+                <h2>Welcome to Our Chamber</h2>
+                <a href="join.html" class="cta">Join Now</a>
+            </section>
+
+            <!-- Weather Section -->
+            <section class="weather">
+                <h2>Weather</h2>
+                <p id="location">Loading Location...</p>
+                <p id="temperature">Loading Temperature...</p>
+                <div id="description"></div>
+            </section>
+
+            <!-- Spotlights Section (Now under Weather) -->
+            <section class="spotlights">
+                <h2>Member Spotlights</h2>
+                <div class="spotlight-item">
+                    <img src="image/vimal.jpg" alt="Bidco Oil">
+                    <h3>Bidco Oil Company</h3>
+                    <p>Co-Founder and Chairman, Bidco Africa. FMCG giant based in Kenya.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 The Nairobi Chamber of Commerce. All rights reserved.</p>
+        </footer>
+    </div>
     
 </body>
+
 </html>
