@@ -1,74 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Nairobi Chamber of Commerce</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Nairobi Chamber of Commerce</title>
+  <link rel="stylesheet" href="css/join.css">
+  <link rel="icon" href="image/favicon.ico">
+
 </head>
-
 <body>
-    <div class="wrapper">
-        <!-- Header -->
-        <header class="header">
-            <img src="image/logo.jpg" alt="Company Logo" class="logo">
-            <h1>The Nairobi Chamber of Commerce</h1>
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="join.html">Join</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!-- Main Content Grid -->
-        <main class="container">
-            <!-- Events Section -->
-            <section class="events">
-                <img src="image/events.jpg" alt="Chamber of Commerce Banner">
-                <h2>Current Events</h2>
-                <p>Upcoming business networking event on March 25th.</p>
-            </section>
+  <header>
+    <img src="image/logo.jpg" alt="Company Logo" class="logo">
+    <h1>The Nairobi Chamber of Commerce</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="join.html">Join</a>
+      <a href="directory.html">Directory</a>
+      <a href="discover.html">Discover</a>
+    </nav>
+  </header>
 
-            <!-- Hero Section -->
-            <section class="hero">
-                <img src="image/nairobi.jpg" alt="Chamber of Commerce Banner">
-                <h2>Welcome to Our Chamber of Commerce</h2>
-                <a href="join.html" class="cta">Join Now</a>
-            </section>
+  <main>
+    <form method="get" action="thankyou.html">
+      <label>
+        First Name:
+        <input type="text" name="firstName" title="First Name" autocomplete="given-name" required>
+      </label>
 
-            <!-- Weather Section -->
-            <section class="weather">
-                <h2>Weather</h2>
-                <p id="location">Loading Location</p>
-                <p id="temperature">Loading Temperature...</p>
-                <div id="description"></div>
-            </section>
+      <label>
+        Last Name:
+        <input type="text" name="lastName" title="Last Name" autocomplete="family-name" required>
+      </label>
 
-            <!-- Member Spotlight -->
-            <section class="spotlights">
-                <h2>Member Spotlights</h2>
-                <div id="spotlight-container">
-                    <div class="spotlight-item">
-                        <img src="image/vimal.jpg" alt="Business 1">
-                        <h3>Bidco oil Company</h3>
-                        <p>Co-Founder and Chairman, Bidco Africa (Fast-Moving Consumer Goods)
-                            Born Nyeri, Kenya, 1960. BSc in Business Administration and Finance,
-                            United States International University - Africa (1980)..</p>
-                    </div>
-                </div>
-            </section>
-            
-        </main>
+      <label>
+        Organization Title:
+        <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}">
+      </label>
 
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2025 The Nairobi Chamber of Commerce. All rights reserved.</p>
-        </footer>
-    </div>
-    
+      <label>
+        Email Address:
+        <input type="email" name="email" title="Email Address" autocomplete="email" placeholder="example@email.com" required>
+      </label>
+
+      <label>
+        Mobile Phone:
+        <input type="tel" name="phone" title="Mobile Phone" autocomplete="tel" required>
+      </label>
+
+      <label>
+        Business Name:
+        <input type="text" name="business" title="Business Name" autocomplete="organization" required>
+      </label>
+
+      <label>
+        Membership Level:
+        <select name="membership" title="Membership Level" required>
+          <option value="NP">NP Membership (Free)</option>
+          <option value="Bronze">Bronze Membership</option>
+          <option value="Silver">Silver Membership</option>
+          <option value="Gold">Gold Membership</option>
+        </select>
+      </label>
+
+      <label>
+        Business Description:
+        <textarea name="description" title="Business Description"></textarea>
+      </label>
+
+      <input type="hidden" name="timestamp" id="timestamp">
+
+      <input type="submit" value="Apply for Membership">
+    </form>
+
+    <section class="membership-cards">
+      <div class="card">
+        <h3>NP Membership</h3>
+        <p>For Non-Profits. No fee.</p>
+        <a href="#npModal">More Info</a>
+      </div>
+      <div class="card">
+        <h3>Bronze Membership</h3>
+        <p>Basic membership level.</p>
+        <a href="#bronzeModal">More Info</a>
+      </div>
+      <div class="card">
+        <h3>Silver Membership</h3>
+        <p>Includes event discounts and promotion.</p>
+        <a href="#silverModal">More Info</a>
+      </div>
+      <div class="card">
+        <h3>Gold Membership</h3>
+        <p>Premium benefits and advertising perks.</p>
+        <a href="#goldModal">More Info</a>
+      </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="npModal" class="modal">NP membership benefits include community service events and nonprofit support. <button onclick="closeModal('npModal')">Close</button></div>
+    <div id="bronzeModal" class="modal">Bronze benefits include basic directory listing and event invites. <button onclick="closeModal('bronzeModal')">Close</button></div>
+    <div id="silverModal" class="modal">Silver benefits include training sessions, spotlight ads, and event discounts. <button onclick="closeModal('silverModal')">Close</button></div>
+    <div id="goldModal" class="modal">Gold members get all benefits plus premium advertising and sponsorship opportunities. <button onclick="closeModal('goldModal')">Close</button></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Chamber of Commerce</p>
+  </footer>
+
 </body>
-
 </html>
