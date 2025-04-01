@@ -1,0 +1,68 @@
+
+        :root {
+            --primary-color: #FFB6C1;
+            --secondary-color: #FFF5E1;
+            --accent-color: #8B4513;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--secondary-color);
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--accent-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .color-swatch {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .wireframe img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            margin: 10px 0;
+        }
+        .wireframe-img {
+            max-width: 100%;
+            height: auto;
+            width: 600px;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+        }
+        @media (max-width: 768px) {
+            .wireframe-img {
+                width: 100%;
+                padding: 0;
+            }
+        }
