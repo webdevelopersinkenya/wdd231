@@ -1,0 +1,196 @@
+* {
+  box-sizing:border-box;
+}
+
+header {
+    background-color: #2a537a;
+    color: white;
+    width: 100%;
+    min-height: 100px;
+    padding: 10px 20px;
+    border: 2px solid gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.header-content {
+    text-align: center;
+    flex-grow: 1;
+}
+.header-center {
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0;
+}
+nav {
+    margin-top: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: lightgray;
+}
+
+  /* JSON DATA GRID STYLES */
+  .discover-grid {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+    border-color: goldenrod;
+  }
+
+  .card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 1.5rem;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centers all child elements */
+    text-align: center; /* Ensures text is centered */
+}
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--secondary-color);
+  }
+  
+  .card-content {
+    padding: 1.5rem;
+    
+  }
+  
+  .card h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+   
+  }*/
+  .profile {
+    flex: 0 0 auto;  /* Ensures the profile image stays on the left */
+    margin-right: 20px;
+}
+.profile img {
+    width: 50px; /* Reduced profile image size */
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+  .card address {
+    color: #666;
+    font-style: normal;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .card p {
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card button {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .card button:hover {
+    background: var(--primary-color);
+  }
+  footer {
+    background-color: #0D3B66;
+    color: white;
+    text-align: center;
+    width: 100%;
+    min-height: 80px;
+    padding: 10px 0;
+    border: 2px solid gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: auto;
+}
+  
+  /* RESPONSIVE LAYOUT */
+  @media (max-width: 768px) {
+    header {
+      grid-template-columns: auto 1fr;
+      padding: 1rem;
+    }
+    .profile {
+        flex: 0 0 auto;  /* Ensures the profile image stays on the left */
+    }
+    .profile img {
+        width: 50px; /* Reduced profile image size */
+        height: auto;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    header h1 {
+      font-size: 1.4rem;
+    }
+  
+    .discover-grid {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+    }
+  
+    nav {
+      grid-column: 1 / -1;
+      margin-top: 1rem;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .discover-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .discover-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }

@@ -1,0 +1,59 @@
+{
+    "data": [
+      {
+        "title": "Nairobi National Park",
+        "address": "Lang'ata Road, Nairobi",
+        "description": "A unique wildlife park located just outside the city, offering a safari experience with a view of the city skyline.",
+        "image": "image/nairobipark.webp"
+      },
+      {
+        "title": "David Sheldrick Wildlife Trust",
+        "address": "Mbagathi Road, Nairobi",
+        "description": "A conservation center for orphaned elephants, where you can adopt and learn about elephant conservation efforts.",
+        "image": "image/david.webp"
+      },
+      {
+        "title": "Giraffe Centre",
+        "address": "Lang'ata Road, Nairobi",
+        "description": "A sanctuary for the endangered Rothschild giraffe, where visitors can feed and interact with the giraffes.",
+        "image": "image/girrafe.webp"
+      },
+      {
+        "title": "Karen Blixen Museum",
+        "address": "Karen, Nairobi",
+        "description": "The former home of Danish author Karen Blixen, now a museum, offering a glimpse into her life and the history of the area.",
+        "image": "image/karen.webp"
+      },
+      {
+        "title": "Nairobi Railway Museum",
+        "address": "Uhuru Highway, Nairobi",
+        "description": "A museum showcasing the history of Kenya's railway system, featuring old locomotives and railway artifacts.",
+        "image": "image/railway.webp"
+      },
+      {
+        "title": "Kazuri Beads",
+        "address": "Mombasa Road, Nairobi",
+        "description": "A pottery workshop known for its handmade ceramic beads and pottery, providing a cultural experience with a shopping opportunity.",
+        "image": "image/kazuribeads.webp"
+      },
+      {
+        "title": "Nairobi Railway Station",
+        "address": "Uhuru Highway, Nairobi",
+        "description": "A historical landmark, famous for its colonial architecture and serving as a hub for the East African Railway network.",
+        "image": "image/nrbstation.webp"
+      },
+      {
+        "title": "Ngong Hills",
+        "address": "Ngong, Nairobi",
+        "description": "A scenic hilltop area offering stunning views of Nairobi, perfect for picnics, hiking, and outdoor activities.",
+        "image": "image/ngong.webp"
+      },
+      {
+        "title": "Bomas of Kenya",
+        "address": "Lang'ata Road, Nairobi",
+        "description": "A cultural center where visitors can experience traditional Kenyan music, dance performances, and cultural displays.",
+        "image": "image/bomasofkenya.webp"
+      }
+    ]
+  }
+  
