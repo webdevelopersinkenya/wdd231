@@ -1,0 +1,136 @@
+/* Container */
+.site-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.site-logo {
+    height: 50px; /* adjust as needed */
+    width: auto;
+    display: block;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 1rem 2rem;
+    color: white;
+}
+
+header .nav-link {
+    color: white;
+    margin-left: 1.5rem;
+    font-weight: bold;
+}
+
+header .nav-link.active {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+}
+
+.main-title {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+/* Two-column layout for main section */
+.main-section {
+    display: flex;
+    gap: 2rem;
+}
+
+.about-me-container {
+    flex: 2;
+}
+
+.student-photo-box {
+    flex: 1;
+}
+
+/* Content Box Styling */
+.content-box {
+    background-color: #f0f0f0;
+    padding: 1rem;
+}
+
+.content-box h3 {
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    margin: -1rem -1rem 1rem -1rem;
+}
+
+/* Student Photo Placeholder */
+.photo-placeholder {
+    width: 100%;
+    padding-top: 100%; /* keeps square */
+    background-color: #ccc;
+    background-size: cover; /* fill the box */
+    background-position: center; /* center the image */
+    background-repeat: no-repeat;
+}
+
+
+/* Courses Section */
+.courses-section {
+    padding: 2rem;
+}
+
+.courses-section h3.section-title {
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+}
+
+.filters {
+    margin: 1rem 0;
+}
+
+.filter-btn {
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-btn.active {
+    background-color: black;
+    color: white;
+}
+
+.course-list {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.course-button {
+    padding: 1rem;
+    background-color: #ccc;
+    flex: 1;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 0.5rem;
+    font-weight: bold;
+}

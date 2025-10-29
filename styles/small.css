@@ -1,0 +1,26 @@
+/* Stack main section columns vertically */
+@media (max-width: 768px) {
+    .main-section {
+        flex-direction: column;
+    }
+
+    .about-me-container, 
+    .student-photo-box {
+        flex: 1; /* full width */
+    }
+
+    /* Reduce main title size */
+    .main-title {
+        font-size: 2rem;
+    }
+
+    /* Course list stacked vertically */
+    .course-list {
+        flex-direction: column;
+    }
+
+    .filter-btn {
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+}
