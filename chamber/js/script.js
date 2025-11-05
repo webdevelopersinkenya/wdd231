@@ -1,55 +1,90 @@
 document.addEventListener("DOMContentLoaded", function () {
     const gridViewBtn = document.getElementById("grid-button");
     const listViewBtn = document.getElementById("list-button");
-    const gridContainer = document.getElementById("member-display");
-    const listContainer = document.getElementById("member-display"); // same container reused
+    const memberContainer = document.getElementById("member-display");
 
-    if (!gridViewBtn || !listViewBtn || !gridContainer) {
-        console.error("One or more elements not found. Check your HTML IDs.");
+    if (!gridViewBtn || !listViewBtn || !memberContainer) {
+        console.error("Missing elements — check button or container IDs.");
         return;
     }
 
+    let memberData = [];
+
+    // --- Render Grid View ---
     function renderGrid(data) {
-        gridContainer.innerHTML = "";
+        memberContainer.innerHTML = "";
+        memberContainer.className = "grid-view";
+
         data.companies.forEach(company => {
-            const div = document.createElement("div");
-            div.classList.add("grid-item");
-            div.innerHTML = `
-                <img src="${company.image}" alt="${company.name}">
-                <div class="company-details">
-                    <strong>${company.name}</strong><br>
-                    <small>${company.address}</small><br>
-                    <small>${company.phone}</small><br>
-                    <a href="mailto:${company.email}">${company.email}</a><br>
-                    <a href="${company.website}" target="_blank">Website</a><br>
-                    <span><strong>Membership:</strong> ${company.membership_level}</span>
+            const card = document.createElement("div");
+            card.classList.add("member-card");
+
+            card.innerHTML = `
+                <img src="${company.image}" alt="${company.name}"
+                     onerror="this.onerror=null; this.src='https://placehold.co/200x150/eee/333?text=No+Logo';" loading="lazy">
+                <div class="member-details">
+                    <h3>${company.name}</h3>
+                    <p>${company.address}</p>
+                    <p>${company.phone}</p>
+                    <p><a href="mailto:${company.email}">${company.email}</a></p>
+                    <p><a href="${company.website}" target="_blank">${company.website}</a></p>
+                    <span class="membership-level">${company.membership_level}</span>
                 </div>
             `;
-            gridContainer.appendChild(div);
+
+            memberContainer.appendChild(card);
         });
     }
 
+    // --- Render List View ---
     function renderList(data) {
-        gridContainer.innerHTML = "";
+        memberContainer.innerHTML = "";
+        memberContainer.className = "list-view";
+
         data.companies.forEach(company => {
-            const div = document.createElement("div");
-            div.classList.add("list-item");
-            div.textContent = company.name;
-            gridContainer.appendChild(div);
+            const row = document.createElement("div");
+            row.classList.add("list-item");
+            row.innerHTML = `
+                <strong>${company.name}</strong> — 
+                ${company.address} — 
+                ${company.phone} — 
+                <a href="${company.website}" target="_blank">${company.website}</a>
+            `;
+            memberContainer.appendChild(row);
         });
     }
 
-    gridViewBtn.addEventListener("click", () => {
+    // --- Load Data Once ---
+    function loadData() {
         fetch("data/members.json")
-            .then(res => res.json())
-            .then(renderGrid)
-            .catch(err => console.error("Error loading data:", err));
+            .then(response => {
+                if (!response.ok) throw new Error("Network response was not ok");
+                return response.json();
+            })
+            .then(data => {
+                memberData = data;
+                renderGrid(memberData); // Default view
+                gridViewBtn.classList.add("active");
+            })
+            .catch(error => {
+                console.error("Error loading member data:", error);
+                memberContainer.innerHTML = `<p style="color:red;">Error loading data.</p>`;
+            });
+    }
+
+    // --- Button Actions ---
+    gridViewBtn.addEventListener("click", () => {
+        gridViewBtn.classList.add("active");
+        listViewBtn.classList.remove("active");
+        renderGrid(memberData);
     });
 
     listViewBtn.addEventListener("click", () => {
-        fetch("data/members.json")
-            .then(res => res.json())
-            .then(renderList)
-            .catch(err => console.error("Error loading data:", err));
+        listViewBtn.classList.add("active");
+        gridViewBtn.classList.remove("active");
+        renderList(memberData);
     });
+
+    // --- Initialize ---
+    loadData();
 });
