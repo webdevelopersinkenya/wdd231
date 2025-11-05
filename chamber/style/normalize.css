@@ -42,7 +42,7 @@ footer {
     text-align: center;
     border-radius: 8px;
     position: relative;
-    border: 2px solid gold;
+    border: 2px solid gray;
 }
 
 button {
@@ -67,7 +67,7 @@ button:hover {
     gap: 15px;
     max-width: 900px;
     margin: auto;
-    border-color: goldenrod;
+    border-color: solid gray;
 }
 
 .grid-item {
@@ -196,7 +196,7 @@ header {
     padding: 1rem;
     border-radius: 5px;
     margin-bottom: 2rem;
-    border: 2px solid gold;
+    border: 2px solid gray;
 }
 .logo {
     position: absolute;

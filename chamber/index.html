@@ -1,79 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Nairobi Chamber of Commerce</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Nairobi Chamber of Commerce</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-    <div class="wrapper">
-        <!-- Header -->
-        <header>
-            <img src="image/logo.jpg" alt="Company Logo" class="logo">
-            <h1>The Nairobi Chamber of Commerce</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="join.html">Join</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <div class="logo-container">
+            <i class="fas fa-camera"></i> <h1>Nairobi Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+            <button class="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+        </nav>
+    </header>
 
-        <!-- Main Content Grid -->
-        <main class="container">
-            <!-- Events Section (Left Column) -->
-            <section class="events">
-                <img src="image/events.webp" alt="Chamber Event">
-                <h2>CURRENT EVENTS</h2>
-                <p>Upcoming business networking event on March 25th.</p>
-            </section>
+    <main>
+        <section class="hero-section">
+            <div class="hero-image-placeholder">
+                <span class="image-text">The Nairobi City</span>
+                <button class="keynote-tickets-btn">Join Us</button>
+            </div>
+        </section>
 
-            <!-- Hero Section (Middle Column) -->
-            <section class="hero">
-                <h2> The Nairobi Chamber of Commerce</h2>
-                <img src="image/nairobi.webp" alt="Nairobi City">
-                <a href="join.html" class="cta">Join Now</a>
-            </section>
-
-            <!-- Weather Section (Right Column) -->
-            <section class="weather">
-                <h2>WEATHER</h2>
-                <p id="location">Loading Location...</p>
-                <p id="temperature">Loading Temperature...</p>
-                <div id="description"></div>
-            </section>
-
-            <!-- Info Section -->
-            <section class="info">
-                <h2>MEMBER SPOTLIGHT</h2>
-                <p>Bidco Africa is East Africa’s leading manufacturer of Fast Moving Consumer Goods (FMCG). Started in 1985 as a soap manufacturing plant in Nairobi,
-                    Bidco has continuously grown over the years to be the home of some of East Africa’s most loved brands across the edible oils & fats,
-                    Hygiene and Personal care and most recently Food and Beverage brands.</p>
-            </section>
-
-            <!-- Spotlights Section (Right Column below Weather) -->
-            <section class="spotlights">
-                <div class="spotlight-item">
-                    <img src="image/vimal.webp" alt="Bidco Oil">
-                    <h3>Bidco Oil Company</h3>
-                    <p>Co-Founder and Chairman, Bidco Africa. FMCG giant based in Kenya.</p>
+        <section class="content-section">
+            <h2>Home</h2>
+            <div class="grid-container">
+                <div class="events-panel">
+                    <h3>Events</h3>
+                    </div>
+                <div class="weather-panel current-weather">
+                    <h3>Current Weather</h3>
+                    <div class="weather-details">
+                        <i class="fas fa-cloud-sun weather-icon"></i>
+                        <div class="temp-info">
+                            <span class="temp">75° F</span>
+                            <span class="condition">Party Cloudy</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>High: 85°</li>
+                        <li>Low: 52°</li>
+                        <li>Humidity: 34%</li>
+                        <li>Sunrise: 7:30am</li>
+                        <li>Sunset: 9:59pm</li>
+                    </ul>
                 </div>
-            </section>
-        </main>
+                <div class="weather-panel forecast">
+                    <h3>Weather Forecast</h3>
+                    <ul>
+                        <li>Today: **90°F**</li>
+                        <li>Wednesday: **89°F**</li>
+                        <li>Thursday: **68°F**</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-        <!-- Footer -->
-        <footer>
-            <p>&copy;Gabriel Aura Mirah| 2025 The Nairobi Chamber of Commerce. All rights reserved.</p>
-            <p>Last Updated: <span id="last-modified"></span></p>
-        </footer>
-    </div>
+        <section class="business-showcase">
+            <div class="business-card">
+                <div class="card-header">
+                    <h4>Business Name</h4>
+                    <p class="tag-line">Business Tag Line</p>
+                </div>
+                <div class="card-body">
+                    <div class="image-box"></div>
+                    <div class="contact-info">
+                        <p>EMAIL: **info@gmail.com**</p>
+                        <p>PHONE: **800-555-1234**</p>
+                        <p>URL: **mybusiness.com**</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="business-card">
+                <div class="card-header">
+                    <h4>Business Name</h4>
+                    <p class="tag-line">Business Tag Line</p>
+                </div>
+                <div class="card-body">
+                    <div class="image-box"></div>
+                    <div class="contact-info">
+                        <p>EMAIL: **info@gmail.com**</p>
+                        <p>PHONE: **800-555-1234**</p>
+                        <p>URL: **mybusiness.com**</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="business-card">
+                <div class="card-header">
+                    <h4>Business Name</h4>
+                    <p class="tag-line">Business Tag Line</p>
+                </div>
+                <div class="card-body">
+                    <div class="image-box"></div>
+                    <div class="contact-info">
+                        <p>EMAIL: **info@gmail.com**</p>
+                        <p>PHONE: **800-555-1234**</p>
+                        <p>URL: **mybusiness.com**</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <address>
+                **Nairobi Chamber of Commerce**<br>
+                  P.O.BOX 46162<br>
+                  Kenya, Nairobi<br>
+                <a href="mailto:info@timbuktucoc.org">info@nairobi.co.ke</a><br>
+                (+254)727625340
+            </address>
+            <div class="social-links">
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="copyright">
+                <p>WDD231 Class Project</p>
+                <p>Gabriel A Mirah</p>
+                <p>&copy; 2025 Nairobi Chamber of Commerce</p>
+            </div>
+        </div>
+    </footer>
     <script src="js/date.js"></script>
-    <script src="js/weather.js"></script>
+    <script src="js/currentweather.js"></script>
+    <script src="js/weatherforecast.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/cards.js"></script>
 </body>
-
 </html>

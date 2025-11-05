@@ -1,47 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Nairobi Chamber of Commerce</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <title>Directory | Nairobi Chamber of Commerce</title>
+    <meta name="description" content="Official directory of businesses and organizations belonging to the Nairobi Chamber of Commerce.">
+    <meta name="author" content="Gabriel A.Mirah, WDD 231">
+
+    <!-- Favicon (Placeholder, replace with your design) -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Open Graph (Facebook Social Media Meta) -->
+    <meta property="og:title" content="Nairobi Chamber Business Directory">
+    <meta property="og:description" content="Find all local businesses in Nairobi,Kenya.">
+    <!-- IMPORTANT: Replace with an actual image URL in your images folder -->
+    <meta property="og:image" content="https://placehold.co/1200x630/600/fff?text=nairobichamberofcommerce+Chamber+Directory">
+    <meta property="og:url" content="https://username.github.io/wdd231/chamber/directory.html">
+    
+    <!-- Font Awesome for Icons (Grid/List/Social) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style/test.css">
+    <!-- CSS (Must be your custom CSS, no frameworks) -->
+    
 </head>
-
 <body>
-    <div class="wrapper">
-        <!-- Header -->
-        <header>
-            <img src="image/logo.jpg" alt="Company Logo" class="logo">
-            <h1>The Nairobi Chamber of Commerce</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="join.html">Join</a></li>
-                </ul>
-            </nav>
-        </header>
-    <div class="btn-container">
-        <button id="gridViewBtn">Grid View</button>
-        <button id="listViewBtn">List View</button>
-    </div>
 
-    <div id="gridContainer" class="grid-view"></div>
-    <div id="listContainer" class="list-view"></div>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">Nairobi CoC</a>
+            
+            <button class="hamburger-menu" id="menu-toggle" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
 
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="container">
+            <ul class="nav-links" id="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="active">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
     <main>
-        <section id="directory" class="grid"></section>
+        <div class="container">
+            <h1>Business Directory</h1>
+            
+            <section class="directory-header">
+                <h2>Member Listing</h2>
+                <div class="view-toggle">
+                    <button id="grid-button" class="active" title="Show Grid View"><i class="fa-solid fa-th-large"></i> Grid</button>
+                    <button id="list-button" title="Show List View"><i class="fa-solid fa-list"></i> List</button>
+                </div>
+            </section>
+
+            <!-- Member Display Container (Content is injected here) -->
+            <section id="member-display">
+                <p>Loading member data...</p>
+            </section>
+        </div>
     </main>
 
+    <!-- FOOTER -->
     <footer>
-        <p>&copy;Gabriel Aura Mirah| <span id="year"></span> Nairobi Chamber of Commerce.All rights reserved.</p>
-        <p>Last Updated: <span id="last-modified"></span></p>
+        <div class="container footer-content">
+            <!-- Contact Information -->
+            <div class="footer-info">
+                <h3>Contact Information</h3>
+                <p>Nairobi COC</p>
+                <p>Email:info@nairobichamberofcommerce.co.ke <a href="mailto:info@timbuktucoc.org">info@nairobichamberofcommerce.org</a></p>
+                <p>Phone: (+254)727625340</p>
+            </div>
+            
+            <!-- Social Media (Placeholder) -->
+            <div class="footer-social">
+                <h3>Connect</h3>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-square fa-2x" style="color:#3b5998;"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter-square fa-2x" style="color:#00aced; margin-left:10px;"></i></a>
+            </div>
+
+            <!-- Development Information -->
+            <div class="footer-dev">
+                <p>&copy; <span id="copyright-year"></span> Nairobi Chamber | <span id="full-name">Gabriel A.Mirah</span> | <span id="course-name">WDD 231</span></p>
+                <p>Last Modification: <span id="last-modified"></span></p>
+            </div>
+        </div>
     </footer>
-
-    <script src="js/script.js"></script> 
-    <script src="js/date.js"></script> 
-
+<script src="js/date.js" defer></script>
+<script src="js/script.js" defer></script>
 </body>
 </html>
