@@ -19,34 +19,30 @@
     
     <!-- Font Awesome for Icons (Grid/List/Social) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style/test.css">
+    <link rel="stylesheet" href="style/styles.css">
     <!-- CSS (Must be your custom CSS, no frameworks) -->
     
 </head>
 <body>
 
     <!-- HEADER -->
-    <header>
-        <div class="container header-content">
-            <a href="index.html" class="logo">Nairobi CoC</a>
-            
-            <button class="hamburger-menu" id="menu-toggle" aria-label="Toggle Navigation Menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+   <header>
+        <div class="logo-container">
+            <i class="fas fa-camera"></i> <h1>Nairobi Chamber of Commerce</h1>
         </div>
-    </header>
-
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="container">
-            <ul class="nav-links" id="main-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#" class="active">Directory</a></li>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
                 <li><a href="discover.html">Discover</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
+
+
+    <!-- NAVIGATION -->
+    
 
     <!-- MAIN CONTENT -->
     <main>
@@ -70,26 +66,23 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="container footer-content">
-            <!-- Contact Information -->
-            <div class="footer-info">
-                <h3>Contact Information</h3>
-                <p>Nairobi COC</p>
-                <p>Email:info@nairobichamberofcommerce.co.ke <a href="mailto:info@timbuktucoc.org">info@nairobichamberofcommerce.org</a></p>
-                <p>Phone: (+254)727625340</p>
+        <div class="footer-info">
+            <address>
+                **Nairobi Chamber of Commerce**<br>
+                  P.O.BOX 46162<br>
+                  Kenya, Nairobi<br>
+                <a href="mailto:info@timbuktucoc.org">info@nairobi.co.ke</a><br>
+                (+254)727625340
+            </address>
+            <div class="social-links">
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            
-            <!-- Social Media (Placeholder) -->
-            <div class="footer-social">
-                <h3>Connect</h3>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-square fa-2x" style="color:#3b5998;"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter-square fa-2x" style="color:#00aced; margin-left:10px;"></i></a>
-            </div>
-
-            <!-- Development Information -->
-            <div class="footer-dev">
-                <p>&copy; <span id="copyright-year"></span> Nairobi Chamber | <span id="full-name">Gabriel A.Mirah</span> | <span id="course-name">WDD 231</span></p>
-                <p>Last Modification: <span id="last-modified"></span></p>
+            <div class="copyright">
+                <p>WDD231 Class Project</p>
+                <p>Gabriel A Mirah</p>
+                <p>&copy; 2025 Nairobi Chamber of Commerce</p>
             </div>
         </div>
     </footer>

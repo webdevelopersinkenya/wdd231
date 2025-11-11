@@ -1,4 +1,16 @@
 
+/* Basic Reset and Variables */
+:root {
+    --primary-color: #333;
+    --secondary-color:#004d40;
+    --accent-color: #888;
+    --text-color: #000;
+    --light-bg: #ccc; /* Used for the main content panels */
+    --card-bg: #e0e0e0; /* Used for business cards */
+    --panel-header-bg: #444; /* Darker header for content panels */
+    --white: #fff;
+    --sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
         /* CSS Reset/Normalize (A small, custom reset) */
         *, *::before, *::after {
             box-sizing: border-box;
@@ -6,16 +18,15 @@
             padding: 0;
         }
         
+       
         body {
-            font-family: 'Arial', sans-serif; /* Use a common font */
-            line-height: 1.6;
-             color: var(--text-color);
-            background-color: #f8f8f8; /* Light background */
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
+    font-family: var(--sans-serif);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f8f8f8;
+    max-width: 1200px; /* Constrain overall width */
+    margin: 0 auto;
+}
         /* ---------------------------------- */
         /* LAYOUT & STRUCTURE (Responsive) */
         /* ---------------------------------- */
@@ -26,7 +37,7 @@
             width: 100%;
         }
 
-        /* Header */
+        /* Header 
         header {
              display: flex;
              justify-content: space-between;
@@ -34,11 +45,16 @@
              padding: 15px 30px;
             border-bottom: 1px solid var(--secondary-color);
             background-color: #004d40; /* Dark Teal - Primary Color */
-            color: white;
+            /*color: white; */
         
-           
-        }
-
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(#004d40);
+    border-bottom: 1px solid var(--secondary-color);
+}
         .header-content {
             display: flex;
             justify-content: space-between;
@@ -58,29 +74,31 @@
 }
 
         /* Navigation */
-        nav {
-            background-color: #00695c; /* Slightly lighter Teal */
-        }
-        
-        .nav-links {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-        }
+        nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
 
-        .nav-links li a {
-            display: block;
-            padding: 0.75rem 1.25rem;
-            text-decoration: none;
-            color: white;
-            transition: background-color 0.3s;
-        }
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0 15px;
+    transition: color 0.3s;
+}
 
-        .nav-links li a:hover,
-        .nav-links li a.active {
-            background-color: #00897b;
-        }
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--accent-color);
+}
 
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 20px;
+}
         /* Hamburger Menu for Mobile */
         .hamburger-menu {
             display: none; /* Hide on desktop */
@@ -96,38 +114,56 @@
             padding: 1rem 0;
         }
         
-        /* Footer */
         footer {
-            background-color: #004d40;
-            color: white;
-            padding: 1.5rem 0;
-            margin-top: 2rem;
-        }
+    background-color: var(--white);
+    padding: 30px;
+    font-size: 0.9em;
+    border-top: 1px solid var(--secondary-color);
+}
 
-        .footer-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            text-align: center;
-        }
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
-        .footer-info, .footer-dev {
-            padding: 0 1rem;
-        }
+address {
+    font-style: normal;
+    line-height: 1.5;
+}
 
-        .footer-dev p {
-            font-size: 0.85rem;
-            margin: 0.25rem 0;
-        }
-        
-        .footer-dev a {
-            color: #b2dfdb;
-            text-decoration: none;
-        }
+address a {
+    color: var(--text-color);
+    text-decoration: none;
+}
 
-        .footer-dev a:hover {
-            text-decoration: underline;
-        }
+.social-links {
+    display: flex;
+    align-items: center;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border-radius: 50%;
+    margin: 0 5px;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.copyright {
+    text-align: right;
+    line-height: 1.5;
+}
+
+.copyright p:first-child {
+    font-weight: bold;
+}
 
         /* ---------------------------------- */
         /* DIRECTORY SPECIFIC STYLES */
