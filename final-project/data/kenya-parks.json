@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Amboseli National Park",
+    "location": "Kajiado County",
+    "size": "392 km²",
+    "description": "Famous for its large elephant herds and views of Mount Kilimanjaro.",
+    "image": "images/amboseli.PNG"
+    
+  },
+  {
+    "name": "Maasai Mara National Reserve",
+    "location": "Narok County",
+    "size": "1,510 km²",
+    "description": "Renowned for the Great Migration and abundant wildlife including lions, cheetahs, and zebras.",
+    "image": "images/mase.PNG"
+  },
+  {
+    "name": "Tsavo East National Park",
+    "location": "Taita-Taveta County",
+    "size": "13,747 km²",
+    "description": "One of the largest parks in Kenya, known for its red elephants and arid landscapes.",
+    "image": "images/tsavo.PNG"
+  },
+  {
+    "name": "Tsavo West National Park",
+    "location": "Taita-Taveta County",
+    "size": "9,065 km²",
+    "description": "Features the Mzima Springs, volcanic hills, and diverse wildlife.",
+    "image": "images/tsavowest.PNG"
+  }
+ 
+]
