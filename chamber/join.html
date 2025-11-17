@@ -1,111 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Nairobi Chamber of Commerce</title>
-  <link rel="stylesheet" href="css/join.css">
-  <link rel="icon" href="image/favicon.ico">
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory | Nairobi Chamber of Commerce</title>
+    <meta name="description" content="Official directory of businesses and organizations belonging to the Nairobi Chamber of Commerce.">
+    <meta name="author" content="Gabriel A.Mirah, WDD 231">
 
+    <!-- Favicon (Placeholder, replace with your design) -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Open Graph (Facebook Social Media Meta) -->
+    <meta property="og:title" content="Nairobi Chamber Business Directory">
+    <meta property="og:description" content="Find all local businesses in Nairobi,Kenya.">
+    <!-- IMPORTANT: Replace with an actual image URL in your images folder -->
+    <meta property="og:image" content="https://placehold.co/1200x630/600/fff?text=nairobichamberofcommerce+Chamber+Directory">
+    <meta property="og:url" content="https://username.github.io/wdd231/chamber/directory.html">
+    
+    <!-- Font Awesome for Icons (Grid/List/Social) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style/styles.css">
+    <!-- CSS (Must be your custom CSS, no frameworks) -->
+  
 </head>
 <body>
-  <header>
-    <img src="image/logo.jpg" alt="Company Logo" class="logo">
-    <h1>The Nairobi Chamber of Commerce</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="join.html">Join</a>
-      <a href="directory.html">Directory</a>
-      <a href="discover.html">Discover</a>
-    </nav>
-  </header>
+    <header>
+        <div class="logo-container">
+            <i class="fas fa-camera"></i> <h1>Nairobi Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="container">
+      <h1><i><b>Join us</b></i></h1>
 
-  <main>
-    <form method="get" action="thankyou.html">
-      <label>
-        First Name:
-        <input type="text" name="firstName" title="First Name" autocomplete="given-name" required>
-      </label>
+      <!-- Membership Form -->
+      <form method="get" action="thankyou.html" id="membership-form">
+        <label>
+          First Name:
+          <input type="text" name="firstName" title="First Name" required autocomplete="given-name">
+        </label>
+        <label>
+          Last Name:
+          <input type="text" name="lastName" title="Last Name" required autocomplete="family-name">
+        </label>
+        <label>
+          Organizational Title:
+          <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}">
+        </label>
+        <label>
+          Email:
+          <input type="email" name="email" title="Email" required autocomplete="email" placeholder="example@email.com">
+        </label>
+        <label>
+          Mobile Number:
+          <input type="tel" name="phone" title="Mobile Number" required autocomplete="tel">
+        </label>
+        <label>
+          Business/Organization Name:
+          <input type="text" name="businessName" title="Business/Organization Name" required autocomplete="organization">
+        </label>
+        <label>
+          Membership Level:
+          <select name="membershipLevel" required>
+            <option value="np">NP Membership (Non-profit, No Fee)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </label>
+        <label>
+          Business Description:
+          <textarea name="businessDescription" title="Business Description"></textarea>
+        </label>
+        <input type="hidden" name="timestamp" id="timestamp">
+        <input type="submit" value="Submit Application">
+      </form>
 
-      <label>
-        Last Name:
-        <input type="text" name="lastName" title="Last Name" autocomplete="family-name" required>
-      </label>
+      <!-- Membership Cards -->
+      <section class="membership-cards">
+        <div class="card" data-modal="np-modal">NP Membership <a href="#">More Info</a></div>
+        <div class="card" data-modal="bronze-modal">Bronze Membership <a href="#">More Info</a></div>
+        <div class="card" data-modal="silver-modal">Silver Membership <a href="#">More Info</a></div>
+        <div class="card" data-modal="gold-modal">Gold Membership <a href="#">More Info</a></div>
+      </section>
 
-      <label>
-        Organization Title:
-        <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}">
-      </label>
+      <!-- Modals -->
+      <dialog id="np-modal"><p>NP Membership Benefits...</p><button class="close">Close</button></dialog>
+      <dialog id="bronze-modal"><p>Bronze Membership Benefits...</p><button class="close">Close</button></dialog>
+      <dialog id="silver-modal"><p>Silver Membership Benefits...</p><button class="close">Close</button></dialog>
+      <dialog id="gold-modal"><p>Gold Membership Benefits...</p><button class="close">Close</button></dialog>
 
-      <label>
-        Email Address:
-        <input type="email" name="email" title="Email Address" autocomplete="email" placeholder="example@email.com" required>
-      </label>
-
-      <label>
-        Mobile Phone:
-        <input type="tel" name="phone" title="Mobile Phone" autocomplete="tel" required>
-      </label>
-
-      <label>
-        Business Name:
-        <input type="text" name="business" title="Business Name" autocomplete="organization" required>
-      </label>
-
-      <label>
-        Membership Level:
-        <select name="membership" title="Membership Level" required>
-          <option value="NP">NP Membership (Free)</option>
-          <option value="Bronze">Bronze Membership</option>
-          <option value="Silver">Silver Membership</option>
-          <option value="Gold">Gold Membership</option>
-        </select>
-      </label>
-
-      <label>
-        Business Description:
-        <textarea name="description" title="Business Description"></textarea>
-      </label>
-
-      <input type="hidden" name="timestamp" id="timestamp">
-
-      <input type="submit" value="Apply for Membership">
-    </form>
-
-    <section class="membership-cards">
-      <div class="card">
-        <h3>NP Membership</h3>
-        <p>For Non-Profits. No fee.</p>
-        <a href="#npModal">More Info</a>
-      </div>
-      <div class="card">
-        <h3>Bronze Membership</h3>
-        <p>Basic membership level.</p>
-        <a href="#bronzeModal">More Info</a>
-      </div>
-      <div class="card">
-        <h3>Silver Membership</h3>
-        <p>Includes event discounts and promotion.</p>
-        <a href="#silverModal">More Info</a>
-      </div>
-      <div class="card">
-        <h3>Gold Membership</h3>
-        <p>Premium benefits and advertising perks.</p>
-        <a href="#goldModal">More Info</a>
-      </div>
-    </section>
-
-    <!-- Modals -->
-    <div id="npModal" class="modal">NP membership benefits include community service events and nonprofit support. <button onclick="closeModal('npModal')">Close</button></div>
-    <div id="bronzeModal" class="modal">Bronze benefits include basic directory listing and event invites. <button onclick="closeModal('bronzeModal')">Close</button></div>
-    <div id="silverModal" class="modal">Silver benefits include training sessions, spotlight ads, and event discounts. <button onclick="closeModal('silverModal')">Close</button></div>
-    <div id="goldModal" class="modal">Gold members get all benefits plus premium advertising and sponsorship opportunities. <button onclick="closeModal('goldModal')">Close</button></div>
+    </div>
   </main>
-
-  <footer>
-    <p>&copy;Gabriel Aura Mirah|wdd231| 2025 Chamber of Commerce.All rights reserved.</p>
-    <p>Last Updated: <span id="last-modified"></span></p>
-  </footer>
-
+    <footer>
+        <div class="footer-info">
+            <address>
+                Nairobi Chamber of Commerce<br>
+                  P.O.BOX 46162<br>
+                  Kenya, Nairobi<br>
+                <a href="mailto:info@nairobi.co.ke">info@nairobi.co.ke</a><br>
+                (+254)727625340
+            </address>
+            <div class="social-links">
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="copyright">
+                <p>WDD231 Class Project</p>
+                <p>Gabriel A Mirah</p>
+                <p>&copy; 2025 Nairobi Chamber of Commerce</p>
+                <p id="footer-date"></p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/modals.js"></script> 
+    <script src="js/date.js"></script> 
 </body>
 </html>
