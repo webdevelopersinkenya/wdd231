@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory | Kenya National wildlife</title>
+    <meta name="description" content="Official directory of businesses and organizations belonging to the Kenya National Wildlife.">
+    <meta name="author" content="Gabriel A.Mirah, WDD 231">
+    <!-- Favicon (Placeholder, replace with your design) -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- Open Graph (Facebook Social Media Meta) -->
+    <meta property="og:title" content="Kenya National wildlife">
+    <meta property="og:description" content="Find all local businesses in Nairobi,Kenya.">
+    <!-- IMPORTANT: Replace with an actual image URL in your images folder -->
+    <!-- Font Awesome for Icons (Grid/List/Social) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles/final.css">
+    <!-- CSS (Must be your custom CSS, no frameworks) -->
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <i class=""></i> <h1>Kenya National Parks</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="container">
+      <h1><i><b>Join us</b></i></h1>
+
+      <!-- Membership Form -->
+<form id="membership-form">
+  <label>
+    First Name:
+    <input type="text" name="firstName" title="First Name" required autocomplete="given-name">
+  </label>
+  <label>
+    Last Name:
+    <input type="text" name="lastName" title="Last Name" required autocomplete="family-name">
+  </label>
+  <label>
+    Organizational Title:
+    <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}">
+  </label>
+  <label>
+    Email:
+    <input type="email" name="email" title="Email" required autocomplete="email" placeholder="example@email.com">
+  </label>
+  <label>
+    Mobile Number:
+    <input type="tel" name="phone" title="Mobile Number" required autocomplete="tel">
+  </label>
+  <label>
+    Business/Organization Name:
+    <input type="text" name="businessName" title="Business/Organization Name" required autocomplete="organization">
+  </label>
+  <label>
+    Membership Level:
+    <select name="membershipLevel" required>
+      <option value="np">NP Membership (Non-profit, No Fee)</option>
+      <option value="bronze">Bronze Membership</option>
+      <option value="silver">Silver Membership</option>
+      <option value="gold">Gold Membership</option>
+    </select>
+  </label>
+  <label>
+    Business Description:
+    <textarea name="businessDescription" title="Business Description"></textarea>
+  </label>
+  <input type="hidden" name="timestamp" id="timestamp">
+  <input type="submit" value="Submit Application">
+</form>
+
+<!-- Thank You Message Container -->
+<div id="form-action-message" class="form-message"></div>
+
+  </main>
+    <footer>
+        <div class="footer-info">
+            <address>
+                Kenya National Parks<br>
+                  P.O.BOX 46162<br>
+                  Kenya, Nairobi<br>
+                <a href="mailto:info@kws.co.ke">info@kws.co.ke</a><br>
+                (+254)727625340
+            </address>
+            <div class="social-links">
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="copyright">
+                <p>WDD231 Class Project</p>
+                <p>Gabriel A Mirah</p>
+                <p>&copy; 2025 Kenya National Parks</p>
+                <p id="footer-date"></p>
+            </div>
+        </div>
+    </footer> 
+    <script src="js/date.js"></script> 
+    <script src="js/modal.js" defer></script>
+     <script src="js/form-action.js" defer></script>
+</body>
+</html>
