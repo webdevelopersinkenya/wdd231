@@ -34,32 +34,39 @@
     <div class="container">
       <h1><i><b>Join us</b></i></h1>
 
-      <!-- Membership Form -->
+  <!-- Membership Form -->
 <form id="membership-form">
   <label>
     First Name:
     <input type="text" name="firstName" title="First Name" required autocomplete="given-name">
   </label>
+
   <label>
     Last Name:
     <input type="text" name="lastName" title="Last Name" required autocomplete="family-name">
   </label>
+
   <label>
     Organizational Title:
-    <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}">
-  </label>
+    <!-- Fixed pattern: use literal space instead of \s -->
+    <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z ]{7,}-?">
+
+
   <label>
     Email:
     <input type="email" name="email" title="Email" required autocomplete="email" placeholder="example@email.com">
   </label>
+
   <label>
     Mobile Number:
     <input type="tel" name="phone" title="Mobile Number" required autocomplete="tel">
   </label>
+
   <label>
     Business/Organization Name:
     <input type="text" name="businessName" title="Business/Organization Name" required autocomplete="organization">
   </label>
+
   <label>
     Membership Level:
     <select name="membershipLevel" required>
@@ -69,10 +76,12 @@
       <option value="gold">Gold Membership</option>
     </select>
   </label>
+
   <label>
     Business Description:
     <textarea name="businessDescription" title="Business Description"></textarea>
   </label>
+
   <input type="hidden" name="timestamp" id="timestamp">
   <input type="submit" value="Submit Application">
 </form>
@@ -80,7 +89,6 @@
 <!-- Thank You Message Container -->
 <div id="form-action-message" class="form-message"></div>
 
-  </main>
     <footer>
         <div class="footer-info">
             <address>

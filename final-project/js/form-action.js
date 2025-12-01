@@ -1,20 +1,19 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const membershipForm = document.getElementById('membership-form');
-    const formMessage = document.getElementById('form-action-message');
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("membership-form");
+    const messageContainer = document.getElementById("form-action-message");
 
-    membershipForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // prevent page reload
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Stop actual submission
 
-        // Show thank-you message
-        formMessage.innerHTML = `
-            <h2>Thank You!</h2>
-            <p>We have received your details and will get back to you shortly.</p>
+        // Optionally, validate fields manually here if needed
+
+        // Display thank you message
+        messageContainer.innerHTML = `
+            <h2>Thank you!</h2>
+            <p>We have received your details and we will get back to you shortly.</p>
         `;
 
-        // Optionally hide the form
-        membershipForm.style.display = 'none';
-
-        // Optionally reset the form
-        // membershipForm.reset();
+        // Optionally, clear the form
+        form.reset();
     });
 });
